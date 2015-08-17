@@ -31,67 +31,35 @@
 	<button onmouseover="displayDate()" onmouseout="hideDate()">The time is?</button>
 	<p id="demo3"></p>
 	<p> Added before pushing to git </p>
+	<button id="yellow" onclick="displayDate()">The time is?</button>
 
-	<script>
-		/*
-			document.getElementById("demo").innerHTML = "Hello Dolly.";
+	ul>li>p*4
 
-			var x = 5;
-			var y = 9;
-			var myName = "Aaron";
-			var girlFriend = "Stevie-Jay";
 
-			document.getElementById("demo2").innerHTML = x + y + myName + " loves " + girlFriend;
 
-			var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
 
-			document.getElementById("first").innerHTML = person.firstName;
-			document.getElementById("second").innerHTML = person.lastName;
-			document.getElementById("third").innerHTML = person.age;
-			document.getElementById("fourth").innerHTML = person.eyeColor;
 
-			function toCelsius(f) {
-	    		return (5/9) * (f-32);
-				}
-
-				document.getElementById("demo").innerHTML = toCelsius(32);
-		*/
-		
+<script>
+	
 	//declare object
-	var circle = {
-		radius:5, 
-		circum:circle.radius * 2
-		phrase: function(){
-			return circle.circum; 
-		}
+	var person = {
+	    firstName: "John",
+	    lastName : "Doe",
+	    id       : 5566,
+	    fullName : function() {
+	       return this.firstName + " " + this.lastName;
+	    }
+	};
 
-		}; 
+	// This function will display the date
+	function displayDate() {
+		document.getElementById("yellow").innerHTML = Date();
+	}
 
-	document.getElementById("demo").innerHTML = circle.phrase;
-			/*
-					document.getElementById("demo").innerHTML = car.phrase();
-
-				//print into table elements
-				document.getElementById("first").innerHTML = car.type;
-				document.getElementById("second").innerHTML = car.model;
-				document.getElementById("third").innerHTML = car.color;
-
-				
-				function displayDate() {
-			    	document.getElementById("demo").innerHTML = Date();
-					}
-
-				function hideDate() {
-			    	document.getElementById("demo").innerHTML = "The time is?";
-					}
-			*/
+</script>
 
 
-
-	</script>
-
-
-	</body>
+</body>
 
 
 </html>
