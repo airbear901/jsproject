@@ -1,3 +1,7 @@
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
+
 <!-- Panel -->
 <div id="toppanel">
 
@@ -164,7 +168,7 @@ if(isset($_GET['logoff']))
 {
 	$_SESSION = array();
 	session_destroy();
-	header("Location: demo.php");
+	header("Location: index.php");
 	exit;
 }
 
@@ -208,7 +212,7 @@ if($_POST['submit']=='Login')
 		$_SESSION['msg']['login-err'] = implode('<br />',$err);
 		// Save the error messages in the session
 
-	header("Location: demo.php");
+	header("Location: index.php");
 	exit;
 } else if($_POST['submit']=='Register')
 {
@@ -265,7 +269,7 @@ if($_POST['submit']=='Login')
 		$_SESSION['msg']['reg-err'] = implode('<br />',$err);
 	}
 
-	header("Location: demo.php");
+	header("Location: index.php");
 	exit;
 }
 
@@ -281,3 +285,16 @@ if($_SESSION['msg'])
 	});
 	</script>';
 }
+?>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+<!-- PNG FIX for IE6 -->
+<!-- http://24ways.org/2007/supersleight-transparent-png-in-ie6 -->
+<!--[if lte IE 6]>
+<script type="text/javascript" src="login_panel/js/pngfix/supersleight-min.js"></script>
+<![endif]-->
+
+<script src="login_panel/js/slide.js" type="text/javascript"></script>
+
+<?php echo $script; ?>
