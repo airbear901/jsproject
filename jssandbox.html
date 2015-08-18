@@ -1,8 +1,22 @@
 <html>
 	<head>
+		<script>
+			//declare object
+			var person = {
+			    firstName: "John",
+			    lastName : "Doe",
+			    id       : 5566,
+			    fullName : function() {
+			       return this.firstName + " " + this.lastName;
+			    }
+			};
 
+			// This function will display the date
+			function displayDate() {
+				document.getElementById("yellow").innerHTML = Date();
+			}
+		</script>
 	</head>
-
 	<body>
 		<p id="demo"></p>
 		<p id="demo2"></p>
@@ -28,38 +42,9 @@
 			</tr>
 		</table>
 
-	<button onmouseover="displayDate()" onmouseout="hideDate()">The time is?</button>
-	<p id="demo3"></p>
-	<p> Added before pushing to git </p>
-	<button id="yellow" onclick="displayDate()">The time is?</button>
-
-	ul>li>p*4
-
-
-
-
-
-<script>
-	
-	//declare object
-	var person = {
-	    firstName: "John",
-	    lastName : "Doe",
-	    id       : 5566,
-	    fullName : function() {
-	       return this.firstName + " " + this.lastName;
-	    }
-	};
-
-	// This function will display the date
-	function displayDate() {
-		document.getElementById("yellow").innerHTML = Date();
-	}
-
-</script>
-
-
-</body>
-
-
+		<button onmouseover="displayDate()" onmouseout="hideDate()">The time is?</button>
+		<p id="demo3"></p>
+		<p> Added before pushing to git </p>
+		<button id="yellow" onclick="displayDate()">The time is?</button>
+	</body>
 </html>
